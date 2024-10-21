@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root{
+    --Very_Dark_Grayish_Blue: hsl(217, 19%, 35%);
+    --Desaturated_Dark_Blue: hsl(214, 17%, 51%);
+    --Grayish_Blue: hsl(212, 23%, 69%);
+    --Light_Grayish_Blue: hsl(210, 46%, 95%);
+    --White: #fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 13px;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--Light_Grayish_Blue);
+}
+.card{
+    background-color: var(--White);
+    width: 330px;
+    height: 518px;
+    margin: 75px auto;
+    border-radius: 12px;
+    position: relative;
+}
+.card_picture{
+    background: url(./images/drawers.jpg);
+    background-size: cover;
+    background-position-y: -20px ;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+}
+.card_content_title{
+    color: var(--Very_Dark_Grayish_Blue);
+    margin: 30px 30px 12px;
+    font-size: 1.30em;
+    line-height: 24px;
+}
+.card_content_description{
+    color: var(--Desaturated_Dark_Blue);
+    margin: 0 42px 30px 30px;
+    font-size: 1.1em;
+    line-height: 22px;
+}
+.card_content_button{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--Light_Grayish_Blue);
+    border-radius: 50%;
+    padding: 7px 8px;
+    z-index: 1;
+}
+.card_content_button:hover{
+    cursor: pointer;
+    background-color: var(--Desaturated_Dark_Blue);
+
+}
+.card_content_button:hover path{
+    fill: var(--White);
+}
+
+.card_content_profile{
+    margin: 0 30px;
+    display: flex;
+    margin-bottom: 50px;
+}
+.card_content_profile_picture{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.card_content_profile_name{
+    color: var(--Very_Dark_Grayish_Blue);
+    margin: 4px 0 2px 15px;
+    font-weight: 700;
+}
+.card_content_profile_date{
+    margin-left: 15px;
+    color: var(--Grayish_Blue);
+}
+
+/* -------SHARE-HIDDEN------ */
+.card_content_social-icons{
+    background-color: var(--Very_Dark_Grayish_Blue);
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    display: none;
+    gap: 5px;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    bottom: 0;
+}
+.card_content_social-icons_share{
+    text-transform: uppercase;
+    color: var(--Grayish_Blue);
+    letter-spacing: 4px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.card_content_social-icons_icon{
+    margin: 0 8px;
+}
+
+.show{
+    display: flex;
+}
+/* ------FOOTER------- */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* ************DESKTOPMODE********** */
+@media only screen and (min-width: 745px){
+    .card{
+        width: 735px;
+        height: 280px;
+        display: flex;
+        margin: 270px auto 75px;
+    }
+    .card_picture{
+        height: 100%;
+        background-position-y: unset;
+        border-radius: 12px 0 0 12px;
+    }
+    .card_content{
+        padding: 0px 50px 30px 20px;
+    }
+    .card_content_title{
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        line-height: 26px;
+        margin-right: 15px;
+    }
+    .card_content_description{
+        margin-bottom: 20px;
+        font-size: 1em;
+        margin-right: 13px;
+    }
+    .card_content_button{
+        right: 50px;
+        bottom: 30px;
+    }
+    .card_content_social-icons{
+        width: 250px;
+        height: 56px;
+        bottom: 80px;
+        border-radius: 8px;
+        right: -60px;
+    }
+    .card_content_social-icons::after{
+        content: "";
+        border: 10px solid;
+        border-color: var(--Very_Dark_Grayish_Blue) transparent transparent;
+        position: absolute;
+        left: 115px;
+        top: 100%;
+    }
+}
